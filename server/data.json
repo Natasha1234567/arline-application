@@ -1,0 +1,424 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "flightName": "Go Air",
+      "Source": "Pune",
+      "Destination": "Udaipur",
+      "image": "go-air-indigo.jpg",
+      "departureTime": "20:55",
+      "arrivalTime": "02:05",
+      "shortDescription": "GoAir is an Indian low-cost airline based in Mumbai, India. It is owned by the Indian business conglomerate Wadia Group."
+    },
+    {
+      "id": 2,
+      "flightName": "Air India, Indigo",
+      "Source": "Pune",
+      "Destination": "Udaipur",
+      "image": "air-india.jpg",
+      "departureTime": "21:55",
+      "arrivalTime": "05:05",
+      "shortDescription": "Air India is the flag carrier airline of India, headquartered at New Delhi. It is owned by Air India Limited."
+    },
+    {
+      "id": 3,
+      "flightName": "Indigo",
+      "Source": "Pune",
+      "Destination": "Udaipur",
+      "image": "indigo.jpg",
+      "departureTime": "20:30",
+      "arrivalTime": "07:05",
+      "shortDescription": "IndiGo is an Indian low-cost airline headquartered in Gurugram, Haryana, India. It is the largest airline in India by passengers carried."
+    },
+    {
+      "id": 4,
+      "flightName": "SpiceJet",
+      "Source": "Pune",
+      "Destination": "Udaipur",
+      "image": "spiceJet.jpg",
+      "departureTime": "02:00",
+      "arrivalTime": "07:05",
+      "shortDescription": "SpiceJet Limited is an Indian low-cost airline headquartered in Gurgaon, India. It is the second largest airline in the country by number of domestic passengers carried, with a market share of 13.6% as of March 2019."
+    },
+    {
+      "id": 5,
+      "flightName": "Air Asia, Indigo",
+      "Source": "Pune",
+      "Destination": "Udaipur",
+      "image": "air-asia.jpg",
+      "departureTime": "18:15",
+      "arrivalTime": "07:05",
+      "shortDescription": "AirAsia India is an Indian low cost carrier headquartered in Bangalore, India. The airline is a joint venture with Tata Sons holding 51% stake in the airline and AirAsia Berhad holding 49% stake"
+    },
+    {
+      "id": 6,
+      "flightName": "Vistara",
+      "Source": "Pune",
+      "Destination": "Udaipur",
+      "image": "vistara.jpg",
+      "departureTime": "05:55",
+      "arrivalTime": "14:25",
+      "shortDescription": "Tata SIA Airlines Limited, operating as Vistara, is an Indian full-service airline, based in Gurgaon, with its hub at Indira Gandhi International Airport."
+    }
+  ],
+  "passengers": [
+    {
+      "id": 1,
+      "name": "Nandani",
+      "flightName": "Go Air",
+      "checkIn": true,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Non-veg",
+      "seatNumber": 5,
+      "passport": "Yes",
+      "passportNumber": "121312324124214",
+      "address": "Nigdi",
+      "DOB": "06-12-1992",
+      "ancillaryServices": "Yes",
+      "serviceName": [
+        "extra-baggage"
+      ],
+      "productsName": []
+    },
+    {
+      "id": 2,
+      "name": "Savi",
+      "flightName": "SpiceJet",
+      "checkIn": true,
+      "inFlight": false,
+      "wheelChair": true,
+      "withInfants": false,
+      "specialMeals": "",
+      "seatNumber": 4,
+      "passport": "Yes",
+      "passportNumber": "4354364776786",
+      "address": "Hinjewadi",
+      "DOB": "28-08-1999",
+      "ancillaryServices": "No",
+      "productsName": [
+        "eye-cover"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Asha",
+      "flightName": "SpiceJet",
+      "checkIn": true,
+      "inFlight": false,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "",
+      "seatNumber": 3,
+      "passport": "Yes",
+      "passportNumber": "6464541523647",
+      "address": "Hinjewadi",
+      "DOB": "01-04-1957",
+      "ancillaryServices": "No",
+      "productsName": []
+    },
+    {
+      "id": 4,
+      "name": "Dilip",
+      "flightName": "Indigo",
+      "checkIn": false,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Non-veg",
+      "seatNumber": 2,
+      "passport": "Yes",
+      "passportNumber": "63463723738738",
+      "address": "Hinjewadi",
+      "DOB": "18-03-1957",
+      "ancillaryServices": "No",
+      "productsName": [
+        "travel-pouch"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "ThakurDas",
+      "flightName": "Go Air",
+      "checkIn": false,
+      "inFlight": true,
+      "wheelChair": true,
+      "withInfants": false,
+      "specialMeals": "Veg",
+      "seatNumber": 1,
+      "passport": "Yes",
+      "passportNumber": "53745867970724214",
+      "address": "Nigdi",
+      "DOB": "08-01-1957",
+      "ancillaryServices": "Yes",
+      "serviceName": [
+        "onboard-food"
+      ],
+      "productsName": [
+        "eye-cover"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Zinnia",
+      "flightName": "Air India, Indigo",
+      "checkIn": true,
+      "inFlight": false,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Non-veg",
+      "seatNumber": 2,
+      "passport": "No",
+      "address": "Nigdi",
+      "DOB": "31-12-1995",
+      "ancillaryServices": "Yes",
+      "serviceName": [
+        "onboard-food"
+      ],
+      "productsName": []
+    },
+    {
+      "id": 7,
+      "name": "Indrajeet",
+      "flightName": "Air India, Indigo",
+      "checkIn": true,
+      "inFlight": false,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Non-veg",
+      "seatNumber": 3,
+      "passport": "Yes",
+      "passportNumber": "3453563476486",
+      "address": "Nigdi",
+      "DOB": "12-03-1995",
+      "ancillaryServices": "No",
+      "productsName": [
+        "water-bottle"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Mohit",
+      "flightName": "Vistara",
+      "checkIn": false,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "",
+      "seatNumber": 6,
+      "passport": "No",
+      "address": "Pimple Saudagar",
+      "DOB": "24-05-1991",
+      "ancillaryServices": "Yes",
+      "serviceName": [
+        "extra-baggage"
+      ],
+      "productsName": []
+    },
+    {
+      "id": 9,
+      "name": "Ipshita",
+      "flightName": "Indigo",
+      "checkIn": true,
+      "inFlight": false,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Non-veg",
+      "seatNumber": 7,
+      "passport": "Yes",
+      "passportNumber": "235263745786869",
+      "address": "Wakad",
+      "DOB": "25-07-1989",
+      "ancillaryServices": "Yes",
+      "serviceName": [
+        "onboard-food"
+      ],
+      "productsName": []
+    },
+    {
+      "id": 10,
+      "name": "Akshay",
+      "flightName": "Vistara",
+      "checkIn": false,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": true,
+      "specialMeals": "Veg",
+      "seatNumber": 12,
+      "passport": "No",
+      "address": "Chinchwad",
+      "DOB": "15-09-1989",
+      "ancillaryServices": "No",
+      "productsName": []
+    },
+    {
+      "id": 11,
+      "name": "Supreet",
+      "flightName": "Air Asia, Indigo",
+      "checkIn": true,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Non-veg",
+      "seatNumber": 2,
+      "passport": "Yes",
+      "passportNumber": "3463474585669",
+      "address": "Pimple Saudagar",
+      "DOB": "10-05-1995",
+      "ancillaryServices": "Yes",
+      "serviceName": [
+        "extra-baggage"
+      ],
+      "productsName": [
+        "Biscuits"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Priyanka",
+      "flightName": "Air Asia, Indigo",
+      "checkIn": true,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Veg",
+      "seatNumber": 3,
+      "passport": "Yes",
+      "passportNumber": "312312821047205",
+      "address": "Wakad",
+      "DOB": "05-06-1993",
+      "ancillaryServices": "No",
+      "productsName": []
+    },
+    {
+      "id": 13,
+      "name": "Swati",
+      "flightName": "Air Asia, Indigo",
+      "checkIn": false,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Veg",
+      "seatNumber": 4,
+      "passport": "Yes",
+      "passportNumber": "2384023482042705270",
+      "address": "Chinchwad",
+      "DOB": "09-06-1992",
+      "ancillaryServices": "No",
+      "productsName": [
+        "Biscuits"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Bhawna",
+      "flightName": "Vistara",
+      "checkIn": false,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Veg",
+      "seatNumber": 4,
+      "passport": "No",
+      "address": "Balewadi",
+      "DOB": "08-02-1991",
+      "ancillaryServices": "No",
+      "productsName": [
+        "Biscuits"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Amit",
+      "flightName": "Vistara",
+      "checkIn": false,
+      "inFlight": true,
+      "wheelChair": false,
+      "withInfants": false,
+      "specialMeals": "Non-veg",
+      "seatNumber": 5,
+      "passport": "No",
+      "address": "Balewadi",
+      "DOB": "10-01-1993",
+      "ancillaryServices": "No",
+      "productsName": [
+        "eye-cover"
+      ]
+    }
+  ],
+  "shoppingItems": [
+    {
+      "id": 1,
+      "itemName": "travel-pouch",
+      "price": "$200",
+      "quantity": 50
+    },
+    {
+      "id": 2,
+      "itemName": "water-bottle",
+      "price": "$50",
+      "quantity": 100
+    },
+    {
+      "id": 3,
+      "itemName": "eye-cover",
+      "price": "$100",
+      "quantity": 100
+    },
+    {
+      "id": 4,
+      "itemName": "Biscuits",
+      "price": "$50",
+      "quantity": 200
+    }
+  ],
+  "ancillaryServices": [
+    {
+      "id": 1,
+      "serviceName": "onboard-food",
+      "price": "$800",
+      "checked": false
+    },
+    {
+      "id": 2,
+      "serviceName": "extra-baggage",
+      "price": "$500",
+      "checked": false
+    }
+  ],
+  "users": [
+    {
+      "id": "114623325224617192844",
+      "name": "Natasha Mansharamani",
+      "firstName": "Natasha",
+      "lastName": "Mansharamani",
+      "email": "bit.natasha04@gmail.com",
+      "authToken": "ya29.A0AfH6SMDP_-njukLv11X4_sBSxdbIv5oQh7rTAWyGSGrzDLp5PzTNZtioEgawwSQpRlvKlacPV8hYOTrD9DLHI7AWS3iErKMXALUriOw0Eu8jqCkaXEDRyXxeXsjf64RUObUrdnZbkqrzF5wE7q1Vrwxrg8F_pGY",
+      "photoUrl": "https://lh3.googleusercontent.com/a-/AOh14Gh1N8dfOgmqMCfTPdmkcdwx1Sxqs8L5qAWcKN5_fg=s96-c",
+      "provider": "GOOGLE"
+    },
+    {
+      "id": "2765287337043621",
+      "name": "Natasha Mansharamani",
+      "firstName": "Natasha",
+      "lastName": "Mansharamani",
+      "email": "natashamansharamani07@gmail.com",
+      "authToken": "EAADRz68E5UIBANJxgrVme6STf31V51GZBfKdzcJZCNsYmSZCHdI89jZCmdZCnNZBau4uknXFhgH8n3LEFyDquCDqYY5fLZA8vSb8p9Bf5Wve0opwBVEvvCPnU0fxdfKodTR6dOZBRbIhmHy3kxxPPyZCWHgACESZAK2l5mkWMhUAUaHZA50PSqeQYGZAYRZAWxDjZCyLbYFgntb4OPEBnYcrPZB993RaDRXS8BYwZAoZD",
+      "photoUrl": "https://graph.facebook.com/2765287337043621/picture?type=normal",
+      "provider": "FACEBOOK"
+    }
+  ],
+  "loggedUserData": [
+    {
+      "id": "2765287337043621",
+      "name": "Natasha Mansharamani",
+      "firstName": "Natasha",
+      "lastName": "Mansharamani",
+      "email": "natashamansharamani07@gmail.com",
+      "authToken": "EAADRz68E5UIBANJxgrVme6STf31V51GZBfKdzcJZCNsYmSZCHdI89jZCmdZCnNZBau4uknXFhgH8n3LEFyDquCDqYY5fLZA8vSb8p9Bf5Wve0opwBVEvvCPnU0fxdfKodTR6dOZBRbIhmHy3kxxPPyZCWHgACESZAK2l5mkWMhUAUaHZA50PSqeQYGZAYRZAWxDjZCyLbYFgntb4OPEBnYcrPZB993RaDRXS8BYwZAoZD",
+      "photoUrl": "https://graph.facebook.com/2765287337043621/picture?type=normal",
+      "provider": "FACEBOOK"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+    "/loggedUserData/update/:id": "/loggedUserData/:id",
+    "/loggedUserData/delete/:id": "/loggedUserData/:id"
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js",
+          "https://apis.google.com",
+          "https://ssl.gstatic.com",
+          "https://connect.facebook.net",
+          "https://connect.facebook.net/en_US/sdk.js",
+          "./assets/images/*.jpg"
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api",
+      "urls": [
+        "http://localhost:3000/flights",
+        "http://localhost:3000/passengers",
+        "http://localhost:3000/shoppingItems",
+        "http://localhost:3000/ancillaryServices"
+      ],
+      "cacheConfig": {
+        "maxSize": 500,
+        "maxAge": "2d",
+        "strategy": "performance"
+      }
+    }
+  ]
+}

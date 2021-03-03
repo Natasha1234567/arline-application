@@ -1,0 +1,18 @@
+<button mat-raised-button color = "primary" routerLink="../../airline">Back</button>
+
+<div *ngIf = "name !== ''">
+   <app-passengers-list [flightName] = "name"></app-passengers-list>
+
+   <table>
+       <tr>
+          <td> 
+             <app-seat-map [flightName] = "name" (seatsData) = "getUpdatedCheckedInSeats($event)"></app-seat-map>
+          </td> 
+          <td>
+            <app-checked-in-passenger [passengerList] = "checkInPassengersList"></app-checked-in-passenger>
+          </td>
+       </tr>
+   </table>
+   
+</div>
+

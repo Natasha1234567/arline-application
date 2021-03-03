@@ -1,0 +1,3 @@
+<button mat-raised-button color = "primary" routerLink="../../airline">Back</button>
+<app-passengers-list [flightName] = "name"></app-passengers-list>
+<app-seat-map [flightName] = "name" (seatsData) = "getUpdatedCheckedInSeats($event)"></app-seat-map>

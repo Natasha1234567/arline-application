@@ -1,0 +1,14 @@
+<div class = "delete">
+<h3>What you want to delete for passenger {{data.name}}?</h3>
+
+<section class = "deleteform">
+    <form [formGroup] = "deleteForm">
+      <mat-checkbox checked = "false" class="example-margin" formControlName ="AS" (change) = "getSelectedValue($event)" name = "AS">Ancillary Services</mat-checkbox>
+      <mat-checkbox checked = "false" class="example-margin" formControlName ="SM" (change) = "getSelectedValue($event)" name = "SM">Special Meals</mat-checkbox>
+      <mat-checkbox checked = "false" class="example-margin" formControlName ="SI" (change) = "getSelectedValue($event)" name = "SI">Shopping Items</mat-checkbox>
+    </form>  
+</section>
+
+<button class = "cancel" mat-stroked-button color = "warn" (click) = "cancel()">Cancel</button>
+<button class = "ok" mat-stroked-button color = "primary" [mat-dialog-close]="modalData">Ok</button>
+</div>

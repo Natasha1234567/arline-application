@@ -1,0 +1,90 @@
+<div class="add">
+    <h3 *ngIf="isNew">Add New Passenger</h3>
+    <h3 *ngIf="!isNew">Add Passenger Details for passenger {{this.data.data.name}}</h3>
+
+    <section class = "form">
+        <form [formGroup]="addForm">
+            <mat-form-field appearance="outline" *ngIf = "isNew">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" (change)="getInputValue($event, 'Name')">
+            </mat-form-field>
+            <mat-form-field appearance="outline" *ngIf="isNew">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="address" (change)="getInputValue($event, 'Address')">
+            </mat-form-field>
+            <mat-form-field appearance="outline" *ngIf = "isNew">
+                <mat-label>Seat number</mat-label>
+                <input matInput formControlName="seatNo" (change)="getInputValue($event, 'seatNo')">
+            </mat-form-field>
+            <mat-form-field appearance="outline" *ngIf = "isNew && data.UserType === 'admin'">
+                <mat-label class = "label">Select Flight:</mat-label>
+                <mat-select formControlName="flightName" name="flight"  (selectionChange)="onFlightChange($event)">
+                  <mat-option *ngFor="let flight of data.data" [value]="flight.flightName">
+                    {{flight.flightName}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Shopping Items</mat-label>
+                <mat-select formControlName="item" (selectionChange)="onShoppingListChange($event)">
+                    <mat-option value="travel-pouch">Travel Pouch</mat-option>
+                    <mat-option value="water-bottle">Water Bottle</mat-option>
+                    <mat-option value="eye-cover">Eye Cover</mat-option>
+                    <mat-option value="Biscuits">Biscuits</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div *ngIf = "status !== 'inFlight'">
+                <mat-radio-group formControlName="mealType" (change) = "getMealType($event)">
+                    <mat-label class = "label">Special Meals:</mat-label>
+                    <div>
+                        <mat-radio-button value="Veg">
+                            Veg
+                        </mat-radio-button>
+                        <mat-radio-button value="Non-veg">
+                            Non-Veg
+                        </mat-radio-button>
+                    </div>
+                </mat-radio-group>
+            </div>
+            <div class="serviceField">
+                <mat-label class = "label">Ancillary Services:</mat-label>
+                <ul formArrayName="serviceName"> 
+                    <li *ngFor="let service of addForm.controls.serviceName.controls; let i=index">
+                        <mat-checkbox [formControlName]="i" name = {{service.value.serviceName}} [checked] = "service.value.checked" (change)="getServiceName($event)">
+                           {{service.value.serviceName}}
+                        </mat-checkbox>
+                    </li>
+                </ul>
+            </div>
+            <div class="serviceField" *ngIf = "!isAirline">
+                <mat-radio-group formControlName="passport" (change)="getPassportDetails($event)">
+                    <mat-label class = "label">Do you have a passport?</mat-label>
+                    <div>
+                        <mat-radio-button value="No">
+                            No
+                        </mat-radio-button>
+                        <mat-radio-button value="Yes">
+                            Yes
+                        </mat-radio-button>
+                    </div>
+                </mat-radio-group>
+                <div *ngIf="addForm.get('passport').value === 'Yes'" class="passportNo">
+                    <mat-form-field appearance="outline">
+                        <mat-label >Passport Number</mat-label>
+                        <input matInput formControlName="passportNo" (change)="getInputValue($event, 'passportNo')">
+                    </mat-form-field>
+                </div>
+            </div>
+            <mat-form-field class="dob" appearance="outline" *ngIf = "isNew">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dob" (dateChange)="getInputValue($event, 'DOB')">
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </form>
+        <button class="cancel" mat-stroked-button color="warn" (click)="cancel()">Cancel</button>
+        <button class="ok" mat-stroked-button color="primary" [mat-dialog-close]="modalData">Ok</button>
+    </section>
+</div>

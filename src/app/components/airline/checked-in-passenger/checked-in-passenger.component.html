@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td *ngFor="let passenger of passengerList | slice: 0:2">
+      <div class="details">
+        <h3>Checked-in Passenger's Details:</h3>
+        <p>Passenger Name: {{passenger.name}}</p>
+        <p>Flight Name: {{passenger.flightName}}</p>
+        <p>Adress of passenger: {{passenger.address}}</p>
+        <p>Date of Birth: {{passenger.DOB}}</p>
+        <p>Do he/she has a passport?: {{passenger.passport}}</p>
+        <p>Seat allocated to him: {{passenger.seatNumber}}</p>
+        <p>Wheel Chair: {{passenger.wheelChair}}</p>
+        <p>Meal Preferences: {{passenger.specialMeals}}</p>
+      </div>
+    </td>
+  </tr>
+</table>

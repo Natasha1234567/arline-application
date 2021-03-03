@@ -1,0 +1,169 @@
+<table *ngIf = "status === 'inFlight' || status === 'checkIn'">
+  <tr>
+    <td>
+      <div class="plane">
+        <div class="cockpit"></div>
+        <div class="exit exit--front fuselage">
+          
+        </div>
+        <ol class="cabin fuselage">
+          <li class="roww row--1">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 0 : 5">
+              <li class="seat" [ngStyle] = "{'background-color': seat.color}">
+                  <input type="checkbox" id={{seat.seatNo}} (click)="handleButtonClick(seat.seatNo)"/>
+                  <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+              </li>
+            </ol>
+          </li>
+          <li class="roww row--2">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 5 : 10;">
+              <li class="seat"  [ngStyle] = "{'background-color': seat.color}">
+                    <input type="checkbox" id={{seat.seatNo}}  (click)="handleButtonClick(seat.seatNo)"/>
+                    <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+              </li>
+              </ol>
+          </li>
+          <li class="roww row--3">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 10 : 15">
+                <li class="seat" [ngStyle] = "{'background-color': seat.color}">
+                  <input type="checkbox" id={{seat.seatNo}} (click)="handleButtonClick(seat.seatNo)" />
+                  <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+                  </li>
+            </ol>
+          </li>
+          <li class="roww row--4">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 15 : 20">
+                <li class="seat" [ngStyle] = "{'background-color': seat.color}">
+                    <input type="checkbox" id={{seat.seatNo}}  (click)="handleButtonClick(seat.seatNo)"/>
+                    <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+                  </li>
+              </ol>
+          </li>
+        </ol>
+        <div class="exit exit--back fuselage">
+    
+        </div>
+      </div>
+    </td>
+    <td class ="descCol">
+      <mat-label *ngIf = "status === 'inFlight'" class = "desc">Meals Opted: </mat-label>
+      <mat-label *ngIf = "status === 'checkIn'" class = "desc">Booked Seats: </mat-label>
+      <div *ngIf = "status === 'checkIn'" class = "checkInDiv">
+        <ul class = "mapDesc">
+          <li>
+            <button mat-flat-button class = "checkBtn">Checked In</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "notCheckBtn">Not Checked In</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "wheelChair">With Wheel Chair</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "infants">With Infants</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "otherBtn">Other</button>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf = "status === 'inFlight'" class = "descDiv">
+        <ul class = "mapDesc">
+          <li>
+            <button mat-flat-button class = "nonVegBtn">Non-Veg</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "vegBtn">Veg</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "noMealBtn">No meals</button>
+          </li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table *ngIf = "status === 'all'">
+  <tr><h1>Seat Map for flight {{flightName}}</h1></tr>
+  <tr>
+    <td>
+      <div class="planeAll">
+        <div class="cockpitAll"></div>
+        <div class="exit exit--front fuselage">
+          
+        </div>
+        <ol class="cabin fuselage">
+          <li class="roww row--1">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 0 : 5">
+              <li class="seat"  [ngStyle] = "{'background-color': seat.color}">
+                  <input type="checkbox" id={{seat.seatNo}} />
+                  <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+                </li>
+            </ol>
+          </li>
+          <li class="roww row--2">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 5 : 10;">
+              <li class="seat"   [ngStyle] = "{'background-color': seat.color}">
+                    <input type="checkbox" id={{seat.seatNo}}  />
+                    <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+              </li>
+              </ol>
+          </li>
+          <li class="roww row--3">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 10 : 15">
+                <li class="seat"  [ngStyle] = "{'background-color': seat.color}">
+                  <input type="checkbox" id={{seat.seatNo}}  />
+                  <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+                  </li>
+            </ol>
+          </li>
+          <li class="roww row--4">
+            <ol class="seats" type="A" *ngFor = "let seat of bookedSeatMap | slice : 15 : 20">
+                <li class="seat"  [ngStyle] = "{'background-color': seat.color}">
+                    <input type="checkbox" id={{seat.seatNo}} />
+                    <label htmlFor={{seat.seatNo}}>{{seat.seatNo}}</label>
+                  </li>
+              </ol>
+          </li>
+        </ol>
+        <div class="exit exit--back fuselage">
+    
+        </div>
+      </div>
+    </td>
+    <td>
+      <mat-label *ngIf = "status === 'all'" class = "desc">Seat Map Description </mat-label>
+      <div class = "allDiv">
+        <ul class = "mapDesc">
+          <li>
+            <button mat-flat-button class = "checkBtn">Checked In</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "notCheckBtn">Not Checked In</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "othersBtn">Other</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "nonVegBtn">Non-veg</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "vegBtn">Veg</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "checkVegBtn">CheckIn + Veg</button>
+          </li>
+          <li>
+            <button mat-flat-button class = "checkNonVegBtn">CheckIn + NonVeg</button>
+          </li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <button class = "cancel" mat-stroked-button color = "warn" (click) = "cancel()"></button>
+  </tr>
+</table>
+
+

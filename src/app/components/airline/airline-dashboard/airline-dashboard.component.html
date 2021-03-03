@@ -1,0 +1,68 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav [mode]="mode.value" style = "width:175px"  [(opened)]="opened">
+    <button mat-flat-button color="warn" (click) = "sidenav.toggle()" class = "toggle">
+      <mat-icon class = "menu">menu</mat-icon>
+      Menu
+    </button>
+      <ul>
+        <li>
+          <a routerLink="../in-flight/Go Air" routerLinkActive="active"
+          (click)="sidenav.toggle()">
+          <mat-icon>flight_land</mat-icon>
+          <span class="icon-name">In Flight</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="../check-in/Go Air" routerLinkActive="active" (click)="sidenav.toggle()">
+            <mat-icon>check_circle</mat-icon>
+            <span class="icon-name">
+                 Check In
+             </span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="login" routerLinkActive="active" (click)="sidenav.toggle()">
+            <mat-icon>profile</mat-icon>
+            <span class="icon-name">
+                 Log Out
+             </span>
+          </a>
+        </li>
+      </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-flat-button color="warn" (click) = "sidenav.toggle()" class = "toggle" *ngIf = "!opened">
+      <mat-icon class = "menu">menu</mat-icon>
+      Menu
+    </button>
+    <div>
+          <div class="flex-container" >
+             <div style="width: 100%;">
+              <p>Flight List</p>
+              <mat-accordion *ngFor = "let flight of flights; let i= index">
+                <mat-expansion-panel hideToggle [expanded]="step === i" (opened)="setStep(i)" class ="panel" (click) = "getPassData(flight.flightName, i)">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      {{flight.flightName}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      <p>{{flight.shortDescription}}</p>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <h3 style = "font-weight: 500;">Flight Details:</h3>
+                  <p class = "flightDetails">Flight will depart from {{flight.Source}} at {{flight.departureTime}}</p>
+                  <p class = "flightDetails">Flight will arrive at {{ flight.Destination}} at {{flight.arrivalTime}}</p>
+                  <p class = "flightDetails">Total Passengers travelling today in {{flight.flightName}} are {{flight.totalPassengers}}.</p>
+                  <mat-action-row>
+                    <button mat-flat-button color="primary" [routerLink]="['/in-flight', flight.flightName]">In Flight</button>
+                    <button mat-flat-button color="primary" [routerLink]="['/check-in', flight.flightName]">Check In</button>
+                    <button mat-flat-button color="primary" (click) = "showSeatMap(flight.flightName)">Seat Map</button>
+                  </mat-action-row>
+                </mat-expansion-panel>
+              </mat-accordion>
+             </div>
+          </div>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

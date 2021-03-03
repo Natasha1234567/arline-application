@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .flight {
+      width: 20%
+  }
+
+  .operation {
+    float: left;
+    margin: 10px;
+  }
+
+  .mat-header-cell, .mat-cell {
+    padding-right: 18px;
+    padding-left: 30px;
+  }
+
+  .add {
+    float:right
+  }
+
+  .addbtn{
+     height:62px;
+     width:200px;
+     font-size: 17px;
+  }
+
+  .label, .mat-select-value-text {
+    color: white;
+  }

@@ -1,0 +1,87 @@
+<div>
+  <table>
+    <tr>
+      <td>
+        <mat-form-field class = "flight">
+          <mat-label class = "label">Select Flight:</mat-label>
+          <mat-select [(ngModel)]="selectedFlight" name="flight"  (selectionChange)="onFlightChange($event)">
+            <mat-option *ngFor="let flight of flights" [value]="flight.flightName">
+              {{flight.flightName}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      </td>
+      <td class ="add">
+        <button class = "addbtn" mat-raised-button color="primary" (click) = "addNewPassenger()">Add New Passenger</button>
+      </td>
+    </tr>
+  </table>
+<div>
+
+<div style = "margin-top: 10px;">
+<mat-form-field>
+    <mat-label class = "label">Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Enter name of the field to filter">
+</mat-form-field>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ancillaryServices">
+      <th mat-header-cell *matHeaderCellDef> Services</th>
+      <td mat-cell *matCellDef="let element"> {{element.serviceName}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="seatNumber">
+      <th mat-header-cell *matHeaderCellDef> Seat Number </th>
+      <td mat-cell *matCellDef="let element"> {{element.seatNumber}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="passport">
+      <th mat-header-cell *matHeaderCellDef> Passport </th>
+      <td mat-cell *matCellDef="let element"> {{element.passportNumber}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="dob">
+        <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+        <td mat-cell *matCellDef="let element"> {{element.DOB}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="specialMeals">
+        <th mat-header-cell *matHeaderCellDef> Special Meals </th>
+        <td mat-cell *matCellDef="let element"> {{element.specialMeals}} </td>
+    </ng-container>
+      
+    <ng-container matColumnDef="shoppingItems">
+        <th mat-header-cell *matHeaderCellDef> Shopping Items </th>
+        <td mat-cell *matCellDef="let element"> {{element.productsName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="operation">
+        <th mat-header-cell *matHeaderCellDef> Operation </th>
+        <td mat-cell *matCellDef="let element"> 
+           <div class = "operation"><button mat-raised-button color = "accent" (click) = "add(element.id)">Add Passenger Data</button></div>
+           <div class = "operation"><button mat-raised-button color = "primary" (click) = "edit(element.id)">Update Passenger Data</button></div>
+           <div class = "operation"><button mat-raised-button color = "danger" (click) = "delete(element.id)">Delete Passenger Data</button></div>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 
+  <!-- Angular 8 pagination -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+</div>
+

@@ -1,0 +1,96 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height:100%;
+    width:100%;
+  }
+
+  .logout {
+    float: right;
+    line-height: 50px;
+  }
+
+  .toggle {
+    width: 175px;
+    height: 45px;
+  }
+
+  .menu {
+    padding-bottom: 15px;
+  }
+  
+  .button-header {
+    margin: 0%;
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+  }
+  
+  .active {
+    color: lightseagreen;
+  }
+
+  ul {
+    margin-block-start: 0px;
+    padding-inline-start: 20px;
+  }
+  
+    li {   
+    margin-top: 30px;
+    list-style: none;
+    a{
+              text-decoration: none;
+    }
+  }  
+  
+  .icon {
+    font-size: 25px;
+    color: black;
+    margin: 3%;
+  }
+
+  .material-icons {
+    font-size: 40px
+  }
+
+  .mat-icon {
+    width: 45px;
+  }
+
+  .lock {
+    height: 34px;
+    width: 40px;
+    padding-bottom: 6px;
+  }
+
+  .icon-name {
+    font-size: 20px
+  }
+
+  .mat-drawer {
+     background-color: #ffd740;
+  }
+
+  .panel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .flightDetails { 
+    text-align: left;
+  }
+
+ 
+    

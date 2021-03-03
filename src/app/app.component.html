@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class ="background"></div>
+<div class = "content" *ngIf="!isLogin; else noContent">
+      <h5>Airline Reservation System is a system for Airline Staff and Admin who can perform various tasks such as Check In user, update details of passenger. This is a platform for them to make passengers journey comfortable and easy.</h5>
+      <p>Login with Facebook, if you are an Admin, else Login with Google <a (click)="login()">Login Now</a></p>
+</div>
+<ng-template #noContent class="content">
+      <router-outlet></router-outlet>
+</ng-template> 
+
+<!-- <div class = "content">
+    <div style = "height: -webkit-fill-available;">
+        <router-outlet></router-outlet>
+      </div>
+</div> -->
+<div style="position: sticky;">
+    <app-footer></app-footer>
+</div>

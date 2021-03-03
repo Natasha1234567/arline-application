@@ -1,0 +1,75 @@
+.background {
+    background-image: url('../assets/images/airlineReservation.jpg');
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  .content {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: black;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 95%;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .content > h5, p {
+    color : whitesmoke;
+    font-weight: 500;
+    font-size:24px;
+  }
+  
+  
+  @media only screen and (max-width: 450px) {
+    .background{ 
+       max-width:400px 
+    }
+
+    .content{
+      width: 370px;
+      top:10%;
+    }
+
+    .intro {
+      width:300px;
+      margin: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .background { 
+       max-width:1500px 
+    }
+
+    .content {
+      top: 5%;
+      height:870px;
+    }
+  }
+  
+  @media only screen and (max-width: 2000px) {
+    .background { 
+      max-width: none;
+      background-size: cover;
+      height:696px;
+    }
+  }
+  
+  
+  
